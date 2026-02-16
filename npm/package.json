@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/companylookup",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Company Lookup is a tool for retrieving metadata about SEC-registered public companies. Look up companies by ticker symbol, CIK number, company name, or SIC industry code. Returns company details including exchange, address, phone, and more.",
   "main": "index.js",
   "types": "index.d.ts",
