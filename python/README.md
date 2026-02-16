@@ -247,8 +247,9 @@ from apiverve_companylookup.apiClient import CompanylookupAPIClient
 
 api = CompanylookupAPIClient("[YOUR_API_KEY]")
 
+query = { "ticker": "AAPL" }
+
 try:
-    query = { "ticker": "AAPL" }
     result = api.execute(query)
     print(result)
 finally:
