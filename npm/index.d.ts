@@ -4,28 +4,41 @@ declare module '@apiverve/companylookup' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface companylookupResponse {
     status: string;
     error: string | null;
     data: CompanyLookupData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface CompanyLookupData {
-      ticker:               string;
-      cik:                  string;
-      name:                 string;
-      tickers:              string[];
-      exchanges:            string[];
-      entityType:           string;
-      sic:                  string;
-      sicDescription:       string;
-      category:             string;
-      stateOfIncorporation: string;
-      fiscalYearEnd:        string;
-      ein:                  string;
-      phone:                string;
+      ticker:               null | string;
+      cik:                  null | string;
+      name:                 null | string;
+      tickers:              (null | string)[];
+      exchanges:            (null | string)[];
+      entityType:           null | string;
+      sic:                  null | string;
+      sicDescription:       null | string;
+      sector:               null | string;
+      category:             null | string;
+      stateOfIncorporation: null | string;
+      fiscalYearEnd:        null | string;
+      ein:                  null | string;
+      phone:                null | string;
       addresses:            Addresses;
       formerNames:          any[];
   }
@@ -36,10 +49,10 @@ declare module '@apiverve/companylookup' {
   }
   
   interface Business {
-      street1:        string;
-      city:           string;
-      stateOrCountry: string;
-      zipCode:        string;
+      street1:        null | string;
+      city:           null | string;
+      stateOrCountry: null | string;
+      zipCode:        null | string;
   }
 
   export default class companylookupWrapper {
