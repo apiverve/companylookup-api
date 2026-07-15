@@ -134,6 +134,7 @@ async function makeRequest() {
     "entityType": "operating",
     "sic": "3571",
     "sicDescription": "Electronic Computers",
+    "sector": "Manufacturing",
     "category": "Large accelerated filer",
     "stateOfIncorporation": "CA",
     "fiscalYearEnd": "0928",
