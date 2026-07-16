@@ -191,11 +191,60 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Company Lookup API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "ticker": "AAPL",
+    "cik": "0000320193",
+    "name": "Apple Inc.",
+    "tickers": [
+      "AAPL"
+    ],
+    "exchanges": [
+      "Nasdaq"
+    ],
+    "entityType": "operating",
+    "sic": "3571",
+    "sicDescription": "Electronic Computers",
+    "sector": "Manufacturing",
+    "category": "Large accelerated filer",
+    "stateOfIncorporation": "CA",
+    "fiscalYearEnd": "0928",
+    "ein": "942404110",
+    "phone": "408-996-1010",
+    "addresses": {
+      "mailing": {
+        "street1": "ONE APPLE PARK WAY",
+        "city": "CUPERTINO",
+        "stateOrCountry": "CA",
+        "zipCode": "95014"
+      },
+      "business": {
+        "street1": "ONE APPLE PARK WAY",
+        "city": "CUPERTINO",
+        "stateOrCountry": "CA",
+        "zipCode": "95014"
+      }
+    },
+    "formerNames": []
+  }
 }
 ```
 
