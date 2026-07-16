@@ -25,6 +25,9 @@ namespace APIVerve.API.CompanyLookup
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -48,10 +51,13 @@ namespace APIVerve.API.CompanyLookup
         public string EntityType { get; set; }
 
         [JsonProperty("sic")]
-        public long Sic { get; set; }
+        public long? Sic { get; set; }
 
         [JsonProperty("sicDescription")]
         public string SicDescription { get; set; }
+
+        [JsonProperty("sector")]
+        public string Sector { get; set; }
 
         [JsonProperty("category")]
         public string Category { get; set; }
@@ -63,7 +69,7 @@ namespace APIVerve.API.CompanyLookup
         public string FiscalYearEnd { get; set; }
 
         [JsonProperty("ein")]
-        public long Ein { get; set; }
+        public long? Ein { get; set; }
 
         [JsonProperty("phone")]
         public string Phone { get; set; }
@@ -96,6 +102,18 @@ namespace APIVerve.API.CompanyLookup
         public string StateOrCountry { get; set; }
 
         [JsonProperty("zipCode")]
-        public long ZipCode { get; set; }
+        public long? ZipCode { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
