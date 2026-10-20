@@ -25,6 +25,11 @@ declare module '@apiverve/companylookup' {
 
 
   interface CompanyLookupData {
+      count:     number | null;
+      companies: Company[];
+  }
+  
+  interface Company {
       ticker:               null | string;
       cik:                  null | string;
       name:                 null | string;
@@ -40,7 +45,7 @@ declare module '@apiverve/companylookup' {
       ein:                  null | string;
       phone:                null | string;
       addresses:            Addresses;
-      formerNames:          any[];
+      formerNames:          FormerName[];
   }
   
   interface Addresses {
@@ -49,10 +54,22 @@ declare module '@apiverve/companylookup' {
   }
   
   interface Business {
-      street1:        null | string;
-      city:           null | string;
-      stateOrCountry: null | string;
-      zipCode:        null | string;
+      street1:                   null | string;
+      street2:                   null;
+      city:                      null | string;
+      stateOrCountry:            null | string;
+      zipCode:                   null | string;
+      stateOrCountryDescription: null | string;
+      isForeignLocation:         number | null;
+      foreignStateTerritory:     null;
+      country:                   null;
+      countryCode:               null;
+  }
+  
+  interface FormerName {
+      name: null | string;
+      from: Date | null;
+      to:   Date | null;
   }
 
   export default class companylookupWrapper {
