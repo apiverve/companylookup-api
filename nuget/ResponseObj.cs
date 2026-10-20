@@ -32,6 +32,15 @@ namespace APIVerve.API.CompanyLookup
 
     public partial class Data
     {
+        [JsonProperty("count")]
+        public long? Count { get; set; }
+
+        [JsonProperty("companies")]
+        public Company[] Companies { get; set; }
+    }
+
+    public partial class Company
+    {
         [JsonProperty("ticker")]
         public string Ticker { get; set; }
 
@@ -78,7 +87,7 @@ namespace APIVerve.API.CompanyLookup
         public Addresses Addresses { get; set; }
 
         [JsonProperty("formerNames")]
-        public object[] FormerNames { get; set; }
+        public FormerName[] FormerNames { get; set; }
     }
 
     public partial class Addresses
@@ -95,6 +104,9 @@ namespace APIVerve.API.CompanyLookup
         [JsonProperty("street1")]
         public string Street1 { get; set; }
 
+        [JsonProperty("street2")]
+        public object Street2 { get; set; }
+
         [JsonProperty("city")]
         public string City { get; set; }
 
@@ -103,6 +115,33 @@ namespace APIVerve.API.CompanyLookup
 
         [JsonProperty("zipCode")]
         public long? ZipCode { get; set; }
+
+        [JsonProperty("stateOrCountryDescription")]
+        public string StateOrCountryDescription { get; set; }
+
+        [JsonProperty("isForeignLocation")]
+        public long? IsForeignLocation { get; set; }
+
+        [JsonProperty("foreignStateTerritory")]
+        public object ForeignStateTerritory { get; set; }
+
+        [JsonProperty("country")]
+        public object Country { get; set; }
+
+        [JsonProperty("countryCode")]
+        public object CountryCode { get; set; }
+    }
+
+    public partial class FormerName
+    {
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("from")]
+        public DateTimeOffset? From { get; set; }
+
+        [JsonProperty("to")]
+        public DateTimeOffset? To { get; set; }
     }
 
     public partial class Premium
