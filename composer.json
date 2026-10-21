@@ -1,7 +1,7 @@
 {
     "name": "apiverve/companylookup",
-    "description": "Company Lookup is a tool for retrieving metadata about SEC-registered public companies. Look up companies by ticker symbol, CIK number, company name, or SIC industry code. Returns company details including exchange, address, phone, and more.",
-    "version": "1.2.0",
+    "description": "Company Lookup matches stock tickers, CIK numbers, company names, or SIC codes with official SEC registration records. It returns legal entity names, trading exchanges, tax EINs, Standard Industrial Classification codes, and registered business addresses.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,13 +15,13 @@
         "api",
         "apiverve",
         "companylookup",
-        "company lookup api",
-        "sec company data",
         "company info api",
-        "ticker lookup",
-        "cik lookup"
+        "company information api",
+        "company lookup api",
+        "api to get company information",
+        "sec company data"
     ],
-    "homepage": "https://apiverve.com/marketplace/companylookup?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/companylookup?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/companylookup",
