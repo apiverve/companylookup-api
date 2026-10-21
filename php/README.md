@@ -1,6 +1,6 @@
 # Company Lookup API - PHP Package
 
-Company Lookup is a tool for retrieving metadata about SEC-registered public companies. Look up companies by ticker symbol, CIK number, company name, or SIC industry code. Returns company details including exchange, address, phone, and more.
+Company Lookup matches stock tickers, CIK numbers, company names, or SIC codes with official SEC registration records. It returns legal entity names, trading exchanges, tax EINs, Standard Industrial Classification codes, and registered business addresses.
 
 ## Installation
 
@@ -69,39 +69,72 @@ $client = new Client(
   "status": "ok",
   "error": null,
   "data": {
-    "ticker": "AAPL",
-    "cik": "0000320193",
-    "name": "Apple Inc.",
-    "tickers": [
-      "AAPL"
-    ],
-    "exchanges": [
-      "Nasdaq"
-    ],
-    "entityType": "operating",
-    "sic": "3571",
-    "sicDescription": "Electronic Computers",
-    "sector": "Manufacturing",
-    "category": "Large accelerated filer",
-    "stateOfIncorporation": "CA",
-    "fiscalYearEnd": "0928",
-    "ein": "942404110",
-    "phone": "408-996-1010",
-    "addresses": {
-      "mailing": {
-        "street1": "ONE APPLE PARK WAY",
-        "city": "CUPERTINO",
-        "stateOrCountry": "CA",
-        "zipCode": "95014"
-      },
-      "business": {
-        "street1": "ONE APPLE PARK WAY",
-        "city": "CUPERTINO",
-        "stateOrCountry": "CA",
-        "zipCode": "95014"
+    "count": 1,
+    "companies": [
+      {
+        "ticker": "AAPL",
+        "cik": "0000320193",
+        "name": "Apple Inc.",
+        "tickers": [
+          "AAPL"
+        ],
+        "exchanges": [
+          "Nasdaq"
+        ],
+        "entityType": "operating",
+        "sic": "3571",
+        "sicDescription": "Electronic Computers",
+        "sector": "Manufacturing",
+        "category": "Large accelerated filer",
+        "stateOfIncorporation": "CA",
+        "fiscalYearEnd": "0926",
+        "ein": "942404110",
+        "phone": "(408) 996-1010",
+        "addresses": {
+          "mailing": {
+            "street1": "ONE APPLE PARK WAY",
+            "street2": null,
+            "city": "CUPERTINO",
+            "stateOrCountry": "CA",
+            "zipCode": "95014",
+            "stateOrCountryDescription": "CA",
+            "isForeignLocation": 0,
+            "foreignStateTerritory": null,
+            "country": null,
+            "countryCode": null
+          },
+          "business": {
+            "street1": "ONE APPLE PARK WAY",
+            "street2": null,
+            "city": "CUPERTINO",
+            "stateOrCountry": "CA",
+            "zipCode": "95014",
+            "stateOrCountryDescription": "CA",
+            "isForeignLocation": null,
+            "foreignStateTerritory": null,
+            "country": null,
+            "countryCode": null
+          }
+        },
+        "formerNames": [
+          {
+            "name": "APPLE INC",
+            "from": "2007-01-10T05:00:00.000Z",
+            "to": "2019-08-05T04:00:00.000Z"
+          },
+          {
+            "name": "APPLE COMPUTER INC",
+            "from": "1994-01-26T05:00:00.000Z",
+            "to": "2007-01-04T05:00:00.000Z"
+          },
+          {
+            "name": "APPLE COMPUTER INC/ FA",
+            "from": "1997-07-28T04:00:00.000Z",
+            "to": "1997-07-28T04:00:00.000Z"
+          }
+        ]
       }
-    },
-    "formerNames": []
+    ]
   }
 }
 ```
@@ -113,11 +146,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/companylookup?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/companylookup?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/companylookup?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/companylookup?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/companylookup?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/companylookup?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
