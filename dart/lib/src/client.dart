@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// Company Lookup API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/companylookup?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/companylookup?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [ticker] (required) - Stock ticker symbol (e.g. AAPL, MSFT, GOOGL) [minLength: 1, maxLength: 5]
