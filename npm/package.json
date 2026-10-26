@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/companylookup",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Company Lookup matches stock tickers, CIK numbers, company names, or SIC codes with official SEC registration records. It returns legal entity names, trading exchanges, tax EINs, Standard Industrial Classification codes, and registered business addresses.",
   "main": "index.js",
   "types": "index.d.ts",
